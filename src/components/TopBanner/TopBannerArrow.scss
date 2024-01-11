@@ -1,0 +1,66 @@
+@import "../../ScssVariables/colors";
+@import "../../ScssVariables/variables";
+
+$mobile-exitkey-transition-delay: 0.15s;
+
+@media screen and (min-width: 0px) and (max-width: $mobile-width) {
+  .banner-topalert-mobailexitkey {
+    cursor: pointer;
+    width: 16.07px;
+    height: 16.07px;
+    margin: 20px;
+    padding: 5px;
+
+    &-top,
+    &-bottom {
+      background: $mobile-exitkey-background;
+      position: absolute;
+      width: 12px;
+      height: 1.5px;
+      border-radius: 100px;
+      transition: transform 0.15s;
+
+      &::after {
+        background: #000;
+        content: "";
+        height: 100%;
+        position: absolute;
+        top: 0;
+        transition: all 0.15s;
+
+        &:first-child {
+          left: 100%;
+          right: 0;
+          transition-delay: 0s;
+        }
+
+        &:last-child {
+          left: 0;
+          right: 100%;
+          transition-delay: $mobile-exitkey-transition-delay;
+        }
+      }
+    }
+
+    &-top {
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+    }
+
+    &-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top right;
+    }
+
+    &:hover {
+      &-top::after {
+        left: 0;
+        transition-delay: $mobile-exitkey-transition-delay;
+      }
+      &-bottom::after {
+        right: 0;
+        transition-delay: 0s;
+      }
+    }
+  }
+}

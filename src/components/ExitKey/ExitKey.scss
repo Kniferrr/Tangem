@@ -1,0 +1,44 @@
+@import "../../ScssVariables/colors";
+@import "../../ScssVariables/variables";
+
+.banner-topalert-exitkey {
+  margin-left: 10px;
+  margin-right: 20px;
+  width: 11.5px;
+  height: 11.5px;
+  border-radius: 1px;
+  --weight: 0.5px;
+  --aa: 1px;
+  cursor: pointer;
+  background: linear-gradient(
+      45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      $exitkey-color calc(50% - var(--weight)),
+      $exitkey-color calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    ),
+    linear-gradient(
+      -45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      $exitkey-color calc(50% - var(--weight)),
+      $exitkey-color calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    );
+
+  &:hover {
+    background: linear-gradient(
+        45deg,
+        transparent calc(50% - var(--weight) - var(--aa)),
+        $white calc(50% - var(--weight)),
+        $white calc(50% + var(--weight)),
+        transparent calc(50% + var(--weight) + var(--aa))
+      ),
+      linear-gradient(
+        -45deg,
+        transparent calc(50% - var(--weight) - var(--aa)),
+        $white calc(50% - var(--weight)),
+        $white calc(50% + var(--weight)),
+        transparent calc(50% + var(--weight) + var(--aa))
+      );
+  }
+}

@@ -1,11 +1,13 @@
 import "./App.scss";
-import TopBanner from "./TopBanner";
+import BottomBanner from "./components/BottomBanner/BottomBanner";
+import TopBanner from "./components/TopBanner/TopBanner";
 
 function App() {
   return (
     <>
       <div className="App">
         <TopBanner />
+        <BottomBanner />
       </div>
     </>
   );

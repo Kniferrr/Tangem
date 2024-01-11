@@ -1,3 +1,6 @@
+import "./TopBannerArrow.scss";
+import "./TopBanner.scss";
+
 function TopBanner() {
   return (
     <div className="banner-alert-container">
@@ -25,6 +28,10 @@ function TopBanner() {
           <div>Shop now</div>
         </button>
         <div className="banner-alert-exitkey"></div>
+        <div className="banner-alert-mobailexitkey">
+          <div className="banner-alert-mobailexitkey-top"></div>
+          <div className="banner-alert-mobailexitkey-bottom"></div>
+        </div>
       </div>
     </div>
   );

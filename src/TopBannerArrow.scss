@@ -1,0 +1,52 @@
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  .banner-alert-mobailexitkey {
+    cursor: pointer;
+    width: 16.07px;
+    height: 16.07px;
+    margin: 20px;
+    padding: 5px;
+  }
+  .banner-alert-mobailexitkey-top,
+  .banner-alert-mobailexitkey-bottom {
+    background: #616161;
+    position: absolute;
+    width: 12px;
+    height: 1.5px;
+    border-radius: 100px;
+  }
+  .banner-alert-mobailexitkey-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+  .banner-alert-mobailexitkey-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+  .banner-alert-mobailexitkey-top::after,
+  .banner-alert-mobailexitkey-bottom::after {
+    background: #000;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+  }
+  .banner-alert-mobailexitkey-top::after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+  }
+  .banner-alert-mobailexitkey-bottom::after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+  }
+  .banner-alert-mobailexitkey:hover .banner-alert-mobailexitkey-top::after {
+    left: 0;
+    transition-delay: 0.15s;
+  }
+  .banner-alert-mobailexitkey:hover .banner-alert-mobailexitkey-bottom::after {
+    right: 0;
+    transition-delay: 0s;
+  }
+}
